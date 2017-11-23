@@ -1,14 +1,5 @@
-# typescript-lib-starter
-A full-featured library develop starter with typescript.
-
-## Attention
-
-+ use ES6 javascript for test suits.
-+ avoid below code for `babel-plugin-transform-runtime` weired issue:
-
-```typescript
-export * from './src/something';
-```
+# algorithm
+Algorithm for common DP problem.
 
 ## Usage
 

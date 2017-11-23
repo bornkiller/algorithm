@@ -4,9 +4,9 @@
  */
 /* tslint:disable:no-console */
 // coin changes
-// bag
 import analyzeMaximumCapacity from '../src/bag/analyze-maximum-capacity';
 import analyzeMaximumCapacityCombination from '../src/bag/analyze-maximum-capacity-combination';
+// bag
 import Material from '../src/bag/material';
 import analyzeMinimumCoins from '../src/coins/analyze-minumum-coins';
 import analyzeMinimumCoinsCombination from '../src/coins/analyze-minumum-coins-combination';
