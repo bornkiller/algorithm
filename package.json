@@ -16,8 +16,8 @@
     "prepublish": "npm-run-all -s clean compile bundle",
     "precommit": "lint-staged",
     "clean": "rm -rf bundle es lib",
-    "dev": "coco server --bootstrap ./src/main.ts",
-    "build": "coco build --bootstrap ./src/main.ts",
+    "dev": "coco server --bootstrap ./public/main.ts",
+    "build": "coco build --bootstrap ./public/main.ts",
     "bundle": "coco bundle ./src/index.js --disable-eslint",
     "compile": "npm-run-all -s compile:esm compile:esn compile:es5",
     "compile:esm": "tsc --declaration --sourceMap false",
@@ -43,11 +43,14 @@
     "url": "https://github.com/bornkiller/typescript-lib-starter/issues"
   },
   "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
-  "dependencies": {},
+  "dependencies": {
+    "lodash-es": "^4.17.4"
+  },
   "devDependencies": {
     "@coco-platform/cli": "^0.3.16",
     "@coco-platform/webpack": "^0.3.0",
     "@types/jest": "^20.0.6",
+    "@types/lodash-es": "^4.17.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
