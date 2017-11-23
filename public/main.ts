@@ -4,12 +4,12 @@
  */
 /* tslint:disable:no-console */
 // coin changes
-import analyzeMinimumCoins from '../src/analyze-minumum-coins';
-import analyzeMinimumCoinsCombination from '../src/analyze-minumum-coins-combination';
 // bag
 import analyzeMaximumCapacity from '../src/bag/analyze-maximum-capacity';
 import analyzeMaximumCapacityCombination from '../src/bag/analyze-maximum-capacity-combination';
 import Material from '../src/bag/material';
+import analyzeMinimumCoins from '../src/coins/analyze-minumum-coins';
+import analyzeMinimumCoinsCombination from '../src/coins/analyze-minumum-coins-combination';
 
 // coin changes
 const Coins = [1, 5, 10, 25];
