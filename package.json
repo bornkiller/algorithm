@@ -15,13 +15,13 @@
   "scripts": {
     "prepublish": "npm-run-all -s clean compile bundle",
     "precommit": "lint-staged",
-    "clean": "rm -rf bundle es lib",
+    "clean": "rm -rf bundle es lib native",
     "dev": "coco server --bootstrap ./public/main.ts",
     "build": "coco build --bootstrap ./public/main.ts",
-    "bundle": "coco bundle ./src/index.js --disable-eslint",
-    "compile": "npm-run-all -s compile:esm compile:esn compile:es5",
-    "compile:esm": "tsc --declaration --sourceMap false",
-    "compile:esn": "NODE_ENV=production babel src --out-dir es",
+    "bundle": "coco bundle ./native/index.js --disable-eslint",
+    "compile": "npm-run-all -s compile:esnative compile:esm compile:es5",
+    "compile:esnative": "tsc --declaration --sourceMap false --outDir native",
+    "compile:esm": "NODE_ENV=production babel src --out-dir es",
     "compile:es5": "NODE_ENV=production babel src --out-dir lib --plugins=transform-es2015-modules-commonjs",
     "test": "jest -c jest.config.js --coverage",
     "test:jest": "jest -c jest.config.js --watch",
@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "lodash-es": "^4.17.4"
   },
   "devDependencies": {
