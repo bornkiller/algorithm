@@ -3,21 +3,13 @@
  * @author - huang.jian <hjj491229492@hotmail.com>
  */
 
+// External
 import minBy from 'lodash-es/minBy';
+// Internal
+import InfinitySet from './infinity-set';
 
 // Coin combination cache
-const CombinationCache: { [key: number]: number[] | IInfinitySet } = {};
-
-// Mock Infinity set
-interface IInfinitySet {
-  length: number;
-}
-
-const InfinitySet: IInfinitySet = {
-  get length() {
-    return Infinity;
-  }
-};
+const CombinationCache: { [key: number]: number[] | InfinitySet } = {};
 
 /**
  * @description - analyze minimum coin
@@ -27,7 +19,7 @@ const InfinitySet: IInfinitySet = {
  *
  * @return {number}
  */
-export default function analyzeMinimumCoinsCombination(coins: number[], amount: number): number[] | IInfinitySet {
+export default function analyzeMinimumCoinsCombination(coins: number[], amount: number): number[] | InfinitySet {
   // Boundary condition
   if (amount === 0) {
     return [];
@@ -41,7 +33,7 @@ export default function analyzeMinimumCoinsCombination(coins: number[], amount: 
   const available = coins.filter((currency) => currency <= amount);
 
   if (available.length === 0) {
-    return InfinitySet;
+    return Reflect.construct(InfinitySet, []);
   }
 
   const solutions = available.map((currency) => {
