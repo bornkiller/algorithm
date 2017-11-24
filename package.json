@@ -1,16 +1,16 @@
 {
-  "name": "typescript-lib-starter",
+  "name": "algorithm",
   "version": "0.1.1",
-  "description": "typescript lib.",
+  "description": "common algorithm problem, solved with typescript.",
   "module": "es/index.js",
-  "main": "bundle/tsc-lib.common.js",
-  "jsnext:main": "bundle/tsc-lib.esm.js",
-  "typings": "src/index.d.ts",
+  "main": "bundle/algorithm.common.js",
+  "jsnext:main": "bundle/algorithm.esm.js",
+  "typings": "native/index.d.ts",
   "files": [
+    "native",
     "es",
     "lib",
-    "bundle",
-    "src"
+    "bundle"
   ],
   "scripts": {
     "prepublish": "npm-run-all -s clean compile bundle",
@@ -31,18 +31,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bornkiller/typescript-lib-starter.git"
+    "url": "git+https://github.com/bornkiller/algorithm.git"
   },
   "keywords": [
     "typescript",
-    "library"
+    "algorithm"
   ],
   "author": "huang.jian <hjj491229492@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bornkiller/typescript-lib-starter/issues"
+    "url": "https://github.com/bornkiller/algorithm/issues"
   },
-  "homepage": "https://github.com/bornkiller/typescript-lib-starter#readme",
+  "homepage": "https://github.com/bornkiller/algorithm#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "lodash-es": "^4.17.4"
